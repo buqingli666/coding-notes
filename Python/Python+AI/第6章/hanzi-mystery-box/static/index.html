@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>汉字谜盒 · 猜字谜小游戏</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- 液态玻璃的彩色折射背景层 -->
+    <div class="bg-aurora">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+        <span class="blob blob-4"></span>
+        <span class="blob blob-5"></span>
+    </div>
+
+    <div class="app">
+        <!-- ============ 侧边栏 ============ -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span class="logo-icon">謎</span>
+                    <div class="logo-text">
+                        <h1>汉字谜盒</h1>
+                        <p>一字一谜，妙趣横生</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-new lg" id="newSessionBtn">
+                <span class="btn-new-icon">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                </span>
+                <span>新建会话</span>
+            </button>
+
+            <div class="sidebar-search">
+                <input type="text" id="searchInput" placeholder="搜索会话…" autocomplete="off">
+            </div>
+
+            <div class="session-list" id="sessionList">
+                <!-- 会话列表由 JS 渲染 -->
+                <div class="empty-hint">点击「新建会话」开始猜谜</div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="seal">谜</div>
+                <span>Powered by DeepSeek</span>
+            </div>
+        </aside>
+
+        <!-- ============ 主聊天区 ============ -->
+        <main class="main">
+            <!-- 顶部栏 -->
+            <header class="topbar">
+                <div class="topbar-title" id="topbarTitle">新会话</div>
+            </header>
+
+            <!-- 消息区 -->
+            <section class="messages" id="messages">
+                <!-- 欢迎屏 -->
+                <div class="welcome" id="welcomeScreen">
+                    <div class="welcome-card">
+                        <div class="welcome-icon">字</div>
+                        <h2>欢迎来到汉字谜盒</h2>
+                        <p>这里收集了组合、包含、半取、象形等各类字谜。<br>跟我一起，用智慧拆解每一个汉字的故事。</p>
+                        <button class="btn-primary lg" id="startBtn">开始猜谜</button>
+                        <div class="quick-tags">
+                            <span>组合谜</span>
+                            <span>包含谜</span>
+                            <span>半取谜</span>
+                            <span>象形谜</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 消息气泡由 JS 渲染 -->
+            </section>
+
+            <!-- 快捷操作 -->
+            <div class="quick-actions" id="quickActions" style="display:none;">
+                <button class="chip" data-text="提示一下">提示一下</button>
+                <button class="chip" data-text="公布答案">公布答案</button>
+                <button class="chip" data-text="换一题">换一题</button>
+            </div>
+
+            <!-- 输入区 -->
+            <footer class="composer">
+                <div class="composer-box">
+                    <textarea id="messageInput" placeholder="输入你的答案或想说的话… (Enter 发送，Shift+Enter 换行)" rows="1"></textarea>
+                    <button class="btn-send lg" id="sendBtn" title="发送" aria-label="发送">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="19" x2="12" y2="6"/>
+                            <polyline points="6 12 12 5 18 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <p class="composer-hint">本内容由 AI 生成，请仔细甄别谜底</p>
+            </footer>
+        </main>
+    </div>
+
+    <!-- 提示消息容器 -->
+    <div class="toast-wrap" id="toastWrap"></div>
+
+    <!-- 确认弹窗（居中模态） -->
+    <div class="confirm-mask" id="confirmMask">
+        <div class="confirm-pop" role="dialog" aria-modal="true" aria-label="确认删除">
+            <div class="confirm-pop-head">
+                <span class="confirm-pop-icon">
+                    <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg>
+                </span>
+                <span class="confirm-pop-title" id="confirmTitle">删除会话</span>
+            </div>
+            <p class="confirm-pop-text" id="confirmText">删除后将无法恢复，确定要删除该会话吗？</p>
+            <div class="confirm-pop-actions">
+                <button class="confirm-pop-btn cancel" id="confirmCancel">取消</button>
+                <button class="confirm-pop-btn danger" id="confirmOk">删除</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- IDEs and Editors ---
+.idea/
+.vscode/
+*.iml
+
+# --- Java (Maven/Gradle) ---
+target/
+build/
+*.class
+*.log
+out/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.pytest_cache/

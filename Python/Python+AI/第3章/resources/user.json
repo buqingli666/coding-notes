@@ -1,0 +1,9 @@
+{
+    "name": "小咘",
+    "age": 3,
+    "gender": "男",
+    "hobbies": [
+        "reading",
+        "swimming"
+    ]
+}
