@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 public class VariableDemo8 {
     static void main() {
-        // BMI = 体重 / 身高的平方
+        /*
+         * 键盘录入练习 - BMI
+         *
+         * BMI = 体重 / 身高的平方
+         *
+         */
 
         Scanner scanner = new Scanner(System.in);
 

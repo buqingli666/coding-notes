@@ -5,10 +5,9 @@ import java.util.Scanner;
 public class VariableDemo6 {
     static void main() {
         /*
-        键盘录入：
-            第一步：找到 Scanner 这个打工人
-            第二步：让 Scanner 干活
-        */
+         * 键盘录入 - Scanner
+         *
+         */
 
         // 1. 找到 Scanner 这个打工人
         Scanner sc = new Scanner(System.in);

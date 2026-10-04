@@ -19,6 +19,7 @@ public class VariableDemo4 {
          * 4. long、float类型的变量加后缀：
          *    - long 需要加 L 后缀 (推荐大写 L，避免和数字 1 混淆)
          *    - float 需要加 F 后缀
+         *
          */
 
         // 1. 定义byte类型的变量

@@ -2,8 +2,12 @@ package com.itheima.variable;
 
 public class VariableDemo5 {
     static void main() {
-
-        // BMI = 体重 / 身高的平方
+        /*
+         * 数据类型练习 - 计算 BMI
+         *
+         * BMI = 体重 / 身高的平方
+         *
+         */
 
         // 1. 定义变量记录我的体重 55.6KG
         double weight = 55.6;

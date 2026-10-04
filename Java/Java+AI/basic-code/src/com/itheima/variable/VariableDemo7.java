@@ -5,9 +5,12 @@ import java.util.Scanner;
 public class VariableDemo7 {
     static void main() {
         /*
-            定义两个整数类型的变量num1和num2，键盘录入数据分别为两个变量赋值。
-            求两个数的和并进行打印。
-        */
+         * 键盘录入练习 - 两数之和
+         *
+         * 定义两个整数类型的变量num1和num2，键盘录入数据分别为两个变量赋值。
+         * 求两个数的和并进行打印。
+         *
+         */
 
         Scanner scanner = new Scanner(System.in);
 
