@@ -22,7 +22,7 @@ public class OperatorDemo13 {
 
         // 3. 判断当前数字是否是7的有缘数
         // ge == 7 || shi == 7 || num % 7 == 0
-        Boolean res = ge == 7 || shi == 7 || num % 7 == 0;
+        boolean res = ge == 7 || shi == 7 || num % 7 == 0;
 
         System.out.println(res);
 

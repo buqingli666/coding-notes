@@ -28,7 +28,7 @@ public class OperatorDemo12 {
         System.out.println(qian);
 
         // 3. 判断是否为回文数
-        Boolean res = ge == qian && shi == bai;
+        boolean res = ge == qian && shi == bai;
         System.out.println(res);
 
     }

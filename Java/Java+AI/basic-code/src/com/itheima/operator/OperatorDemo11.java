@@ -15,7 +15,7 @@ public class OperatorDemo11 {
         System.out.println("请输入一个整数：");
         int num = scanner.nextInt();
 
-        Boolean res = num <= 1 | num >= 10;
+        boolean res = num <= 1 | num >= 10;
         System.out.println(res);
 
     }
